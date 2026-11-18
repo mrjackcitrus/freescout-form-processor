@@ -1,0 +1,27 @@
+{
+    "name": "mrjackcitrus/freescout-form-processor",
+    "description": "Creates FreeScout conversations from website contact forms.",
+    "require": {
+        "php": ">=8.2",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000 -t public public/index.php"
+        ],
+        "test": [
+            "@test:smoke",
+            "@lint"
+        ],
+        "test:smoke": "@php tests/smoke.php",
+        "lint": "find src public tests -name '*.php' -exec php -l {} +"
+    }
+}

@@ -1,0 +1,19 @@
+# Local config, dependencies, and runtime storage.
+/.env
+/vendor/
+/storage/*
+!/storage/.gitkeep
+
+# macOS metadata.
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100/
+.Trashes/
+
+# Windows metadata.
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
